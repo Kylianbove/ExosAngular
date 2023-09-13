@@ -1,0 +1,40 @@
+<h2>Exercice 1</h2>
+<div>
+    <!-- Champ de saisie pour le nom d'utilisateur -->
+    <label for="userName">Nom :</label>
+    <input type="text" id="userName" [(ngModel)]="userName" />
+
+    <!-- Sélecteur de police de caractère -->
+    <label for="font">Police :</label>
+    <select id="font" [(ngModel)]="selectedFont">
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Calibri">Calibri</option>
+      <option value="Didot">Didot</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Geneva">Geneva</option>
+    </select>
+    
+    <!-- Champ de saisie pour la taille de la police -->
+    <label for="fontSize">Taille :</label>
+    <input type="text" id="fontSize" [(ngModel)]="fontSize" />
+    
+    <!-- Sélection de l'alignement du texte -->
+    <label>Alignement :</label>
+    
+      <input type="radio" id="alignLeft" [(ngModel)]="textAlignment" value="left" name="alignment" />
+      <label for="alignLeft">Gauche</label>
+    
+      <input type="radio" id="alignRight" [(ngModel)]="textAlignment" value="right" name="alignment" />
+      <label for="alignRight">Droite</label>
+      <input type="radio" id="alignCenter" [(ngModel)]="textAlignment" value="center" name="alignment" />
+      <label for="alignCenter">Centré</label>
+</div>
+  
+<div>
+  <!-- Affichage du message avec les styles dynamiques -->
+  <p [style.font-family]="selectedFont" [style.font-size]="fontSize" [style.text-align]="textAlignment">
+    Bonjour {{ userName | uppercase }} !
+  </p>
+</div>
+  

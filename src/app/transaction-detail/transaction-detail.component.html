@@ -1,0 +1,35 @@
+<h2>Détails de la Transaction</h2>
+
+<!-- Bouton de retour vers la page d'accueil, avec un lien router -->
+<button routerLink="/">Retour à la page d'accueil</button>
+
+<!-- Affiche le contenu suivant uniquement s'il y a une transaction -->
+<div *ngIf="transaction">
+  
+  <!-- Liste de définition pour afficher les détails de la transaction -->
+  <dl>
+    <dt>ID :</dt>
+    <dd>{{ transaction.id }}</dd>
+    
+    <dt>Montant :</dt>
+    <dd>{{ transaction.amount | currency }}</dd>
+    
+    <dt>Balance :</dt>
+    <dd>{{ transaction.balance | currency }}</dd>
+    
+    <dt>Libellé :</dt>
+    <dd>{{ transaction.label }}</dd>
+    
+    <dt>Date :</dt>
+    <dd>{{ transaction.date | date: 'dd/MM/yyyy HH:mm' }}</dd>
+    
+    <dt>Description :</dt>
+    <dd>{{ transaction.description }}</dd>
+  </dl>
+</div>
+
+<!-- Affiche le contenu suivant uniquement si aucune transaction n'est disponible -->
+<div *ngIf="!transaction">
+  <p>Transaction introuvable.</p>
+</div>
+

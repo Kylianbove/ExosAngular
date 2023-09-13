@@ -1,0 +1,49 @@
+/* Style pour le titre h2 */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+/* Style pour les boutons */
+button {
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+/* Style pour les liens router */
+a {
+color: #007bff;
+text-decoration: none;
+}
+
+/* Style pour les sections de contenu */
+div {
+margin: 20px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #f9f9f9;
+}
+
+/* Style pour la liste de définition (dl, dt, dd) */
+dl {
+font-weight: bold;
+}
+
+dt {
+margin-top: 10px;
+}
+
+dd {
+margin-bottom: 10px;
+}
+
+p {
+color: #ff0000;
+font-weight: bold;
+}
+  
